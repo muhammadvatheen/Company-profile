@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stayin.id – Cari hotel, villa, kos, dan apartemen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="top">
+    <div class="wrap">
+      <div class="bar">
+        <a href="#" class="logo">Stayin.id</a>
+        <div class="right">
+          <span class="pill">IDR</span>
+          <span class="pill">🇮🇩</span>
+          <button class="pill-btn" id="btnList">Daftarkan properti Anda</button>
+          <button class="white-btn" id="btnReg">Daftar</button>
+          <button class="white-btn" id="btnLogin">Masuk</button>
+        </div>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button class="on" data-type="">🛏 Penginapan</button>
+        <button data-type="Hotel">🏨 Hotel</button>
+        <button data-type="Villa">🏡 Villa</button>
+        <button data-type="Kos">🚪 Kos</button>
+        <button data-type="Apartemen">🏢 Apartemen</button>
+        <button data-type="Resor">🌴 Resor</button>
+      </nav>
+      <div class="hero">
+        <h1>Cari penginapan berikutnya</h1>
+        <p>Temukan harga terbaik untuk hotel, villa, kos, dan masih banyak lagi.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <form class="search" id="form">
+      <label class="f f1"><span>🔍</span><input id="q" placeholder="Mau ke mana?" list="kota"
+          autocomplete="off"></label>
+      <datalist id="kota">
+        <option>Bali</option>
+        <option>Jakarta</option>
+        <option>Bandung</option>
+        <option>Yogyakarta</option>
+        <option>Lombok</option>
+      </datalist>
+      <label class="f"><span>📅</span><input id="in" type="date" aria-label="Check-in"></label>
+      <label class="f"><span>📅</span><input id="out" type="date" aria-label="Check-out"></label>
+      <label class="f"><span>👤</span>
+        <select id="guests" aria-label="Tamu">
+          <option value="1">1 dewasa</option>
+          <option value="2" selected>2 dewasa</option>
+          <option value="4">4 dewasa</option>
+          <option value="8">8 dewasa</option>
+        </select>
+      </label>
+      <button class="go" type="submit">Cari</button>
+    </form>
+    <p class="err" id="err" role="alert"></p>
+  </div>
+
+  <main class="wrap">
+    <section class="promo">
+      <div>
+        <h2>Hemat 15% untuk pemesanan pertama</h2>
+        <p>Daftar gratis dan dapatkan diskon di ribuan penginapan di seluruh Indonesia.</p>
+        <button class="blue-btn" id="btnPromo">Daftar sekarang</button>
+      </div>
+      <img src="image/image 1.jpg" alt="Liburan bersama keluarga" class="ph">
+    </section>
+
+    <section>
+      <h2>Telusuri berdasarkan jenis akomodasi</h2>
+      <div class="slider">
+        <div class="types" id="types"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Destinasi favorit</h2>
+      <p class="sub">Penginapan yang paling banyak dipesan bulan ini.</p>
+      <div class="dests" id="dests"></div>
+    </section>
+
+    <section id="hasil">
+      <div class="head">
+        <div>
+          <h2 id="judul">Penginapan pilihan untuk Anda</h2>
+          <p class="sub" id="info"></p>
+        </div>
+        <select id="sort" aria-label="Urutkan">
+          <option value="rec">Rekomendasi</option>
+          <option value="low">Harga terendah</option>
+          <option value="high">Harga tertinggi</option>
+          <option value="rate">Nilai tertinggi</option>
+        </select>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="news">
+      <h2>Hemat waktu dan uang</h2>
+      <p>Daftar dan kami kirim penawaran terbaik ke email Anda.</p>
+      <form id="nl"><input type="email" id="email" placeholder="Alamat email Anda" required><button
+          class="blue-btn">Berlangganan</button></form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap cols">
+      <div><b>Bantuan</b><a href="#">Pusat bantuan</a><a href="#">Kebijakan pembatalan</a><a href="#">Hubungi kami</a>
+      </div>
+      <div><b>Jelajahi</b><a href="#">Hotel</a><a href="#">Villa</a><a href="#">Kos</a><a href="#">Apartemen</a></div>
+      <div><b>Perusahaan</b><a href="#">Tentang kami</a><a href="#">Karier</a><a href="#">Syarat &amp; ketentuan</a>
+      </div>
+      <div><b>Mitra</b><a href="#">Daftarkan properti</a><a href="#">Login mitra</a></div>
+    </div>
+    <p class="copy">© 2026 Stayin.id. Semua hak dilindungi.</p>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="box" id="box"></div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
